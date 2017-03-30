@@ -87,7 +87,7 @@ De nos jours, les environnements frontend évoluent si rapidement que les naviga
   // Natif
   document.querySelectorAll('a[target=_blank]');
   ```
-- [1.4](#1.4) <a name='1.4'></a> Requête par descendants
+- [1.4](#1.4) <a name='1.4'></a> Requête sur les descendants
 
   ```js
   // jQuery
