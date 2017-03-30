@@ -35,9 +35,9 @@ De nos jours, les environnements frontend évoluent si rapidement que les naviga
 
 ## Sélecteur jQuery
 
-À la place des sélecteurs communs comme class, id ou attribute il est possible d'utiliser `document.querySelector` ou `document.querySelectorAll` à la place. Les différences consistent en:
-* `document.querySelector` retourne le premier élément trouvé
-* `document.querySelectorAll` retourne tous les éléments trouvés sous forme d'une NodeList. Il est possible de le convertir en Array à l'aide de `[].slice.call(document.querySelectorAll(selector) || []);`
+À la place des sélecteurs communs comme class, id ou attribute il est possible d'utiliser `document.querySelector` ou `document.querySelectorAll`. Les différences sont que:
+* `document.querySelector` retourne le premier élément trouvé,
+* `document.querySelectorAll` retourne tous les éléments trouvés sous forme d'une [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList). Il est possible de le convertir en Array à l'aide de `[].slice.call(document.querySelectorAll(selector) || []);`
 * Si aucun élément n'a été trouvé, jQuery peut retourner `[]` alors que l'API DOM va retourner `null`. Faites attention au Null Pointer Exception. Vous pouvez aussi utiliser `||` pour définir la valeur par défaut si rien n'a été trouvé, comme `document.querySelectorAll(selector) || []`
 
 > Remarque: `document.querySelector` et `document.querySelectorAll` sont assez **LENTS**, essayez plutôt d'utiliser `getElementById`, `document.getElementsByClassName` ou `document.getElementsByTagName` si vous souhaitez obtenir un gain de performance.
